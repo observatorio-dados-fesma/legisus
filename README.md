@@ -29,3 +29,7 @@ and data_publicacao between date("{dt.strftime('%Y-%m-%d')}") and date("{dt.strf
 - Tag-amento de assuntos
 - Identificação do Maranhão
 - Identificação do Grupo FNS
+
+### Painel
+
+![](painel-leis.png)
