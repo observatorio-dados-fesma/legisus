@@ -10,6 +10,11 @@ Para mais detalhes consulte o seguinte [link](https://basedosdados.org/dataset/0
 
 ### Scripts
 
+#### [Coleta de Informações Diárias](dou.py) (WebScrapping)
+
+- Limpeza das consultas presente no HTML utilizado na página
+- Dados muito resumidos
+
 #### [Coleta](legisus.py) (Google Bigquery)
 
 ```
