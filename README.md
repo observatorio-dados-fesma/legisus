@@ -10,7 +10,7 @@ Para mais detalhes consulte o seguinte [link](https://basedosdados.org/dataset/0
 
 ### Scripts
 
-1. [Coleta](legisus.py) (Google Bigquery)
+#### [Coleta](legisus.py) (Google Bigquery)
 
 ```
 select * from `basedosdados.br_imprensa_nacional_dou.secao_1` 
@@ -18,7 +18,7 @@ where orgao like "%Ministério da Saúde%"
 and data_publicacao between date("{dt.strftime('%Y-%m-%d')}") and date("{dt.strftime('%Y-%m-%d')}")
 ```
 
-2. [Análise dos Dados](analise.py)
+#### [Análise dos Dados](analise.py)
 
 - Remoção de stopwords (nltk) e termos muito repetitivos
 - Tag-amento de assuntos
