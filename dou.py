@@ -16,6 +16,8 @@ class Dou(object):
 		
 			data = get(url).text
 		
+			print(data)
+
 			text_data = findall(r'<script id="params" type="application/json">\n\t(.*?)\n', data)[0]
 
 			return loads(text_data)
@@ -60,22 +62,24 @@ class Dou(object):
 
 	def save_data_yesterday(self, date: str):
 
-		with open(f'S:/04. FUNDO ESTADUAL DE SAÚDE/05. ANO 2023/1. Controle Financeiro/07. Recurso Federal/03. Painéis/Imagens e Outros/diario_ontem.json', 'w') as file:
+		with open(f'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/1. Recurso Federal/01. Painel Legislação do SUS/diario_ontem.json', 'w') as file:
 		
 			dump(self.tidy_data(date = date), file, indent = 2)
 
 	def save_data_today(self, date: str):
 
-		with open(f'S:/04. FUNDO ESTADUAL DE SAÚDE/05. ANO 2023/1. Controle Financeiro/07. Recurso Federal/03. Painéis/Imagens e Outros/diario_dia.json', 'w') as file:
+		with open(f'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/1. Recurso Federal/01. Painel Legislação do SUS/diario_dia.json', 'w') as file:
 		
 			dump(self.tidy_data(date = date), file, indent = 2)
 
-dou = Dou()
+if __name__ == '__main__':
 
-hoje = datetime.now().strftime('%d-%m-%Y')
-
-ontem = datetime.now() - timedelta(1)
-ontem = ontem.strftime('%d-%m-%Y')
-
-dou.save_data_today(date = hoje)
-dou.save_data_yesterday(date = ontem)
+	dou = Dou()
+	
+	hoje = datetime.now().strftime('%d-%m-%Y')
+	
+	ontem = datetime.now() - timedelta(1)
+	ontem = ontem.strftime('%d-%m-%Y')
+	
+	dou.save_data_today(date = hoje)
+	dou.save_data_yesterday(date = ontem)

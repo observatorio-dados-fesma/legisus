@@ -130,7 +130,7 @@ class LegiSus:
 
 				if i['tipo'] == 'PORTARIA':
 
-					if search('Média e Alta Complexidade|Atenção Especializada', i['texto_completo']) != None or search('Média e Alta Complexidade|Atenção Especializada', i['ementa']) != None:
+					if search('Média e Alta Complexidade|Atenção Especializada|SAMU', i['texto_completo']) != None or search('Média e Alta Complexidade|Atenção Especializada|SAMU', i['ementa']) != None:
 
 						i['grupo'] = 'Média e Alta Complexidade'
 
@@ -138,7 +138,7 @@ class LegiSus:
 
 						i['grupo'] = 'Equipamentos'
 
-					elif search('recursos financeiros de capital', i['texto_completo']) != None or search('recursos financeiros de capital', i['ementa']) != None:
+					elif search('recursos financeiros de capital|execução de obras', i['texto_completo']) != None or search('recursos financeiros de capital|execução de obras', i['ementa']) != None:
 
 						i['grupo'] = 'Obras'
 
@@ -146,7 +146,7 @@ class LegiSus:
 
 						i['grupo'] = 'Atenção Primária'
 
-					elif search('Assistência Farmacêutica', i['texto_completo']) != None or search('Assistência Farmacêutica', i['ementa']) != None:
+					elif search('Assistência Farmacêutica', i['texto_completo']) != None or search('Assistência Farmacêutica|PNAISP|CBAF|CEAF', i['ementa']) != None:
 
 						i['grupo'] = 'Assistência Farmacêutica'
 
@@ -189,4 +189,7 @@ with open('dados.json', 'w', encoding = 'utf-8') as file:
 
 	json.dump(data, file, indent = 2, ensure_ascii = False)
 
-copy('C:/Users/jersiton.matos/Documents/envs/leg/dados.json', 'S:/04. FUNDO ESTADUAL DE SAÚDE/05. ANO 2023/1. Controle Financeiro/07. Recurso Federal/03. Painéis/Imagens e Outros')
+copy(
+	'C:/Users/jersiton.matos/Documents/envs/leg/dados.json', 
+	'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/1. Recurso Federal/01. Painel Legislação do SUS'
+)
