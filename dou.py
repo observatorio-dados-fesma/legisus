@@ -62,13 +62,13 @@ class Dou(object):
 
 	def save_data_yesterday(self, date: str):
 
-		with open(f'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/1. Recurso Federal/01. Painel Legislação do SUS/diario_ontem.json', 'w') as file:
+		with open(f'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/11. Painéis Gerenciais - PBI/01. Painel Legislação do SUS/diario_ontem.json', 'w') as file:
 		
 			dump(self.tidy_data(date = date), file, indent = 2)
 
 	def save_data_today(self, date: str):
 
-		with open(f'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/1. Recurso Federal/01. Painel Legislação do SUS/diario_dia.json', 'w') as file:
+		with open(f'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/11. Painéis Gerenciais - PBI/01. Painel Legislação do SUS/diario_dia.json', 'w') as file:
 		
 			dump(self.tidy_data(date = date), file, indent = 2)
 

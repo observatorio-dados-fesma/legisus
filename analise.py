@@ -191,5 +191,5 @@ with open('dados.json', 'w', encoding = 'utf-8') as file:
 
 copy(
 	'C:/Users/jersiton.matos/Documents/envs/leg/dados.json', 
-	'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/1. Recurso Federal/01. Painel Legislação do SUS'
+	'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/11. Painéis Gerenciais - PBI/01. Painel Legislação do SUS'
 )
