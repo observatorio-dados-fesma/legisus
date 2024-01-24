@@ -190,6 +190,6 @@ with open('dados.json', 'w', encoding = 'utf-8') as file:
 	json.dump(data, file, indent = 2, ensure_ascii = False)
 
 copy(
-	'C:/Users/jersiton.matos/Documents/envs/leg/dados.json', 
+	'C:/Users/felipe.moraes/Documents/3. Python/legisus/dados.json', 
 	'S:/05. FUNDO ESTADUAL DE SAÚDE/06. ANO 2024/1. Controle Financeiro/11. Painéis Gerenciais - PBI/01. Painel Legislação do SUS'
 )
