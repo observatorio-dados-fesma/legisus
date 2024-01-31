@@ -12,7 +12,7 @@ df = read_sql(
 	where orgao like "%Ministério da Saúde%"
 	and data_publicacao between date("{dt.strftime('%Y-%m-%d')}") and date("{dt.strftime('%Y-%m-%d')}")
 	''',
-	billing_project_id = 'Legisus'
+	billing_project_id = 'legisus-412218'
 )
 
 print(dt)

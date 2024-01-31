@@ -15,8 +15,6 @@ class Dou(object):
 			url = f'https://www.in.gov.br/leiturajornal?org=Minist%C3%A9rio%20da%20Sa%C3%BAde&data={date}#daypicker'
 		
 			data = get(url).text
-		
-			print(data)
 
 			text_data = findall(r'<script id="params" type="application/json">\n\t(.*?)\n', data)[0]
 
